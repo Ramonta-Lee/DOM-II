@@ -95,7 +95,9 @@ emailField.addEventListener('focus', () => {
 });
 
 const firstNav = document.querySelector('a');
-firstNav.preventDefault();
+firstNav.addEventListener('click', () => {
+ firstNav.preventDefault();
+});
 
 
 // stretch goal gsap
