@@ -18,9 +18,17 @@ const navLinks = document.querySelectorAll('a');
 
  // 4 --click
  const mySchool = document.querySelector('.intro img');
- mySchool.addEventListener('click', () => {
+ mySchool.addEventListener('click', (event) => {
   mySchool.setAttribute('src', 'https://images.unsplash.com/photo-1490380169520-0a4b88d52565?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+
+  event.stopPropagation();
  });
+
+ const body = document.querySelector('.intro');
+ body.addEventListener('click', () => {
+  body.style.backgroundColor = 'red';
+ });
+
 
  // 5/6 --keydown/keypress
  const darkMode = document.querySelector('*');
@@ -95,8 +103,9 @@ const introsec = document.querySelector('.intro').addEventListener("contextmenu"
   ease: "elastic(1, 0.75)"
  })
 
- event.stopPropagation();
 })
+
+Draggable.create(document.querySelector('.logo-heading'), {type: 'x,y'});
 
 
 
