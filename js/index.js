@@ -94,6 +94,9 @@ emailField.addEventListener('focus', () => {
  emailField.style.backgroundColor = 'hotpink';
 });
 
+const firstNav = document.querySelector('a');
+firstNav.preventDefault();
+
 
 // stretch goal gsap
 const introsec = document.querySelector('.intro').addEventListener("contextmenu", (event) => {
@@ -102,7 +105,6 @@ const introsec = document.querySelector('.intro').addEventListener("contextmenu"
   rotateY: 180,
   ease: "elastic(1, 0.75)"
  })
-
 })
 
 Draggable.create(document.querySelector('.logo-heading'), {type: 'x,y'});
